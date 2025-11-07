@@ -2,19 +2,33 @@
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)  
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Model-orange.svg)](https://scikit-learn.org/)  
 [![XGBoost](https://img.shields.io/badge/XGBoost-0.9+-green.svg)](https://xgboost.readthedocs.io/)  
+[![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-blue.svg)](https://www.kaggle.com/)  
 [![Google Colab](https://img.shields.io/badge/Google-Colab-yellow.svg)](https://colab.research.google.com/)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 ---
 
+## 🌟 Project Highlights  
+This project focuses on **predicting the likelihood of credit default** using financial and demographic data from the **Kaggle "Give Me Some Credit" competition**.  
+It includes **data preprocessing, model building, evaluation, and interpretation** — first implemented in **Kaggle Notebooks**, then refined and documented in **Google Colab** for GitHub.
+
+**Key Features:**  
+- End-to-end ML workflow from data cleaning to model prediction  
+- Comparison of **Logistic Regression, Random Forest, and XGBoost**  
+- ROC-AUC, Precision, Recall, and F1-score evaluation  
+- Clear handling of **imbalanced dataset issues**  
+- Ready-to-run Colab notebook and Kaggle-compatible pipeline  
+
+---
+
 ## 📘 Overview  
-This project predicts **the probability of a person defaulting on a loan within two years** using credit history data.  
-It uses machine learning classification models such as **Logistic Regression**, **Random Forest**, and **XGBoost** to identify high-risk borrowers.
+This project predicts **the probability of a borrower defaulting within two years** based on historical credit behavior.  
+It demonstrates how ML models can detect financial risk patterns and assist in responsible lending decisions.
 
 ---
 
 ## 🧩 Dataset Description  
-Each row represents a person with their financial and demographic information.  
+Dataset source: [Kaggle - Give Me Some Credit](https://www.kaggle.com/c/GiveMeSomeCredit)  
 
 | Feature | Description |
 |----------|--------------|
@@ -36,19 +50,19 @@ Each row represents a person with their financial and demographic information.
 1. **Data Preprocessing**  
    - Removed irrelevant columns (`Unnamed: 0`)  
    - Handled missing values in `MonthlyIncome` and `NumberOfDependents`  
-   - Split data into features (`X_train`) and target (`y_train`)
+   - Split data into `X_train` and `y_train`
 
 2. **Model Training**  
-   - Algorithms used:
+   - Implemented:
      - Logistic Regression  
      - Random Forest  
      - XGBoost  
 
 3. **Model Evaluation**  
-   - Evaluated models using:  
+   - Metrics used:  
      - **Accuracy**  
      - **ROC-AUC**  
-     - **Precision, Recall, F1-score**
+     - **Precision**, **Recall**, **F1-score**
 
 ---
 
@@ -63,32 +77,32 @@ Each row represents a person with their financial and demographic information.
 **Recall:** 0.1984  
 **F1-Score:** 0.2974  
 
-> ⚠️ The dataset is **imbalanced**, meaning most people did *not* default — so accuracy alone can be misleading.
+> ⚠️ The dataset is **imbalanced** — most people did *not* default, so accuracy alone can be misleading.
 
 ---
 
 ## 🧠 Insights  
-- High accuracy (~93%) doesn’t mean the model performs well due to imbalance.  
-- ROC-AUC gives a better sense of true performance.  
-- Improvement can be achieved with techniques like **SMOTE**, **class weighting**, or **resampling**.  
+- High accuracy (~93%) is due to class imbalance — not necessarily good prediction of defaulters.  
+- ROC-AUC is a better measure of discrimination ability.  
+- Performance can be improved with **resampling**, **feature scaling**, and **hyperparameter tuning**.
 
 ---
 
 ## 🚀 Future Improvements  
 ✅ Apply SMOTE or undersampling for balancing.  
-✅ Use hyperparameter tuning with GridSearchCV.  
-✅ Try advanced models (LightGBM, CatBoost, Neural Nets).  
+✅ Use GridSearchCV for parameter tuning.  
+✅ Experiment with LightGBM, CatBoost, or deep learning models.  
 
 ---
 
 ## 🛠️ Tech Stack  
 - **Language:** Python 🐍  
 - **Libraries:** Scikit-Learn, XGBoost, Pandas, NumPy, Matplotlib  
-- **Environment:** Google Colab  
+- **Platforms:** Kaggle Notebooks, Google Colab  
 - **Version Control:** GitHub  
 
----
 
+---
 
 ## ✍️ Author  
 **Sidhanth**  
@@ -99,4 +113,3 @@ Each row represents a person with their financial and demographic information.
 
 ## 📜 License  
 This project is licensed under the **MIT License** – feel free to use and modify with attribution.
-
